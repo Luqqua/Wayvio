@@ -1,0 +1,6 @@
+/* Paper variant: Light Gray */
+:root {
+  --paper-bg: #f7f7f3;
+  --paper-bg-deep: #b8b8b1;
+  --paper-ink: #000000;
+}

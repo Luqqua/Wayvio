@@ -1,0 +1,6 @@
+id: 16
+typename: separator
+icon: "bi bi-hr"
+title: "block.title.separator"
+description: "block.description.separator"
+custom_html: true

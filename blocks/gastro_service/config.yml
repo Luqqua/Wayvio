@@ -1,0 +1,6 @@
+id: 11
+typename: gastro_service
+icon: "bi bi-card-list"
+title: "block.title.gastro_service"
+description: "block.description.gastro_service"
+custom_html: true

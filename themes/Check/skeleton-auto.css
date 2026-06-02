@@ -1,0 +1,88 @@
+/* Check theme — Big Check */
+:root {
+  --background-color: #622218;
+  --template-accent: #1B3A4B;
+  --template-text: #F0E8D8;
+}
+
+html {
+  position: relative; width: 100%; max-width: 100%;
+  min-height: 100vh; min-height: 100dvh;
+  overflow-x: hidden; overflow-x: clip;
+  background-color: #4A1A10;
+  overscroll-behavior-x: none;
+}
+
+html::before {
+  content: ""; position: fixed; top: -220px; right: 0; bottom: -220px; left: 0;
+  pointer-events: none; z-index: -3; background: #4A1A10;
+  -webkit-transform: translateZ(0); transform: translateZ(0); will-change: transform;
+}
+
+html::after {
+  content: ""; position: fixed; top: 0; right: 0; bottom: 0; left: 0;
+  pointer-events: none; z-index: -2;
+  background:
+    conic-gradient(oklch(0.32 0.12 25) 0 25%, oklch(0.94 0.03 70) 0 50%,
+                   oklch(0.32 0.12 25) 0 75%, oklch(0.94 0.03 70) 0 100%)
+    0 0 / 80px 80px;
+  -webkit-transform: translateZ(0); transform: translateZ(0); will-change: transform;
+}
+
+a, a:hover, a:focus, a:active { color: var(--accentColor); text-decoration: none; }
+.social-icon, .credit-txt-clr, .footer a { color: var(--textColor) !important; }
+
+@supports (-webkit-touch-callout: none) {
+  html::after { display: none; }
+  body::before {
+    content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+    pointer-events: none; z-index: -1;
+    background:
+      conic-gradient(oklch(0.32 0.12 25) 0 25%, oklch(0.94 0.03 70) 0 50%,
+                     oklch(0.32 0.12 25) 0 75%, oklch(0.94 0.03 70) 0 100%)
+      0 0 / 80px 80px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  position: relative;
+  isolation: isolate;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.column {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 550px) {
+  .container {
+    width: 80%;
+  }
+  .column, .columns {
+    margin-left: 0;
+  }
+  .column:first-child, .columns:first-child {
+    margin-left: 0;
+  }
+}

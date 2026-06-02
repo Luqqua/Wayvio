@@ -1,0 +1,118 @@
+/* Sunburst theme */
+:root {
+  --background-color: #E8D8A4;
+  --template-accent: #8B4500;
+  --template-text: #2A1A0A;
+}
+
+html {
+  position: relative; width: 100%; max-width: 100%;
+  min-height: 100vh; min-height: 100dvh;
+  overflow-x: hidden; overflow-x: clip;
+  background-color: #D8C894;
+  overscroll-behavior-x: none;
+}
+
+html::before {
+  content: ""; position: fixed;
+  top: -220px; right: 0; bottom: -220px; left: 0;
+  pointer-events: none; z-index: -3;
+  background: #D8C894;
+  -webkit-transform: translateZ(0); transform: translateZ(0);
+  will-change: transform;
+}
+
+html::after {
+  content: ""; position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  pointer-events: none; z-index: -2;
+  background: radial-gradient(60% 60% at 30% 35%, oklch(0.96 0.03 75 / 0.9) 0%, transparent 70%),
+    conic-gradient(from -10deg at 30% 35%,
+      oklch(0.88 0.06 55) 0deg, oklch(0.82 0.10 35) 14deg,
+      oklch(0.88 0.06 55) 28deg, oklch(0.82 0.10 35) 42deg,
+      oklch(0.88 0.06 55) 56deg, oklch(0.82 0.10 35) 70deg,
+      oklch(0.88 0.06 55) 84deg, oklch(0.82 0.10 35) 98deg,
+      oklch(0.88 0.06 55) 112deg, oklch(0.82 0.10 35) 126deg,
+      oklch(0.88 0.06 55) 140deg, oklch(0.82 0.10 35) 154deg,
+      oklch(0.88 0.06 55) 168deg, oklch(0.82 0.10 35) 182deg,
+      oklch(0.88 0.06 55) 196deg, oklch(0.82 0.10 35) 210deg,
+      oklch(0.88 0.06 55) 224deg, oklch(0.82 0.10 35) 238deg,
+      oklch(0.88 0.06 55) 252deg, oklch(0.82 0.10 35) 266deg,
+      oklch(0.88 0.06 55) 280deg, oklch(0.82 0.10 35) 294deg,
+      oklch(0.88 0.06 55) 308deg, oklch(0.82 0.10 35) 322deg,
+      oklch(0.88 0.06 55) 336deg, oklch(0.82 0.10 35) 350deg,
+      oklch(0.88 0.06 55) 360deg);
+  -webkit-transform: translateZ(0); transform: translateZ(0);
+  will-change: transform;
+}
+
+a, a:hover, a:focus, a:active { color: var(--accentColor); text-decoration: none; }
+.social-icon, .credit-txt-clr, .footer a { color: var(--textColor) !important; }
+
+@supports (-webkit-touch-callout: none) {
+  html::after { display: none; }
+  body::before {
+    content: ""; position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    pointer-events: none; z-index: -1;
+    background: radial-gradient(60% 60% at 30% 35%, oklch(0.96 0.03 75 / 0.9) 0%, transparent 70%),
+    conic-gradient(from -10deg at 30% 35%,
+      oklch(0.88 0.06 55) 0deg, oklch(0.82 0.10 35) 14deg,
+      oklch(0.88 0.06 55) 28deg, oklch(0.82 0.10 35) 42deg,
+      oklch(0.88 0.06 55) 56deg, oklch(0.82 0.10 35) 70deg,
+      oklch(0.88 0.06 55) 84deg, oklch(0.82 0.10 35) 98deg,
+      oklch(0.88 0.06 55) 112deg, oklch(0.82 0.10 35) 126deg,
+      oklch(0.88 0.06 55) 140deg, oklch(0.82 0.10 35) 154deg,
+      oklch(0.88 0.06 55) 168deg, oklch(0.82 0.10 35) 182deg,
+      oklch(0.88 0.06 55) 196deg, oklch(0.82 0.10 35) 210deg,
+      oklch(0.88 0.06 55) 224deg, oklch(0.82 0.10 35) 238deg,
+      oklch(0.88 0.06 55) 252deg, oklch(0.82 0.10 35) 266deg,
+      oklch(0.88 0.06 55) 280deg, oklch(0.82 0.10 35) 294deg,
+      oklch(0.88 0.06 55) 308deg, oklch(0.82 0.10 35) 322deg,
+      oklch(0.88 0.06 55) 336deg, oklch(0.82 0.10 35) 350deg,
+      oklch(0.88 0.06 55) 360deg);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  position: relative;
+  isolation: isolate;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.column {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 550px) {
+  .container {
+    width: 80%;
+  }
+  .column, .columns {
+    margin-left: 0;
+  }
+  .column:first-child, .columns:first-child {
+    margin-left: 0;
+  }
+}

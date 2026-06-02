@@ -1,0 +1,49 @@
+/* animations */
+.button-entrance {
+  animation-name: bgFadeIn;
+  animation-duration: 0.6s;
+  animation-fill-mode: both;
+  animation-delay: calc(var(--delay) / 10);
+}
+
+@keyframes bgFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.button-hover,
+.credit-hover {
+  display: inline-block;
+  transform: none;
+  box-shadow: none;
+  transition-duration: 0.2s;
+  transition-property: filter, opacity;
+  filter: none;
+}
+
+.button-hover:active,
+.button-hover:focus,
+.button-hover:hover,
+.credit-hover:active,
+.credit-hover:focus,
+.credit-hover:hover {
+  transform: none;
+  filter: opacity(0.85);
+  box-shadow: none;
+}
+
+.footer-hover {
+  display: inline-block;
+  transform: none;
+  box-shadow: none;
+  transition-duration: 0.2s;
+  transition-property: filter, opacity;
+}
+
+.footer-hover:active,
+.footer-hover:focus,
+.footer-hover:hover {
+  transform: none;
+  box-shadow: none;
+  filter: opacity(0.85);
+}

@@ -1,0 +1,6 @@
+id: 12
+typename: social_proof
+icon: "bi bi-chat-heart"
+title: "block.title.social_proof"
+description: "block.description.social_proof"
+custom_html: true

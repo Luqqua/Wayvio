@@ -1,0 +1,92 @@
+/* Topo theme */
+:root {
+  --background-color: #EBE2D6;
+  --template-accent: #1B3A4B;
+  --template-text: #14130F;
+}
+
+html {
+  position: relative; width: 100%; max-width: 100%;
+  min-height: 100vh; min-height: 100dvh;
+  overflow-x: hidden; overflow-x: clip;
+  background-color: #DDD4C6;
+  overscroll-behavior-x: none;
+}
+
+html::before {
+  content: ""; position: fixed;
+  top: -220px; right: 0; bottom: -220px; left: 0;
+  pointer-events: none; z-index: -3;
+  background: #DDD4C6;
+  -webkit-transform: translateZ(0); transform: translateZ(0);
+  will-change: transform;
+}
+
+html::after {
+  content: ""; position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  pointer-events: none; z-index: -2;
+  background: repeating-radial-gradient(circle at 28% 38%, oklch(0.30 0.05 220 / 0.18) 0 1px, transparent 1px 22px),
+    repeating-radial-gradient(circle at 78% 72%, oklch(0.30 0.05 220 / 0.14) 0 1px, transparent 1px 28px),
+    radial-gradient(120% 90% at 50% 50%, oklch(0.96 0.02 80) 0%, oklch(0.92 0.03 75) 100%);
+  -webkit-transform: translateZ(0); transform: translateZ(0);
+  will-change: transform;
+}
+
+a, a:hover, a:focus, a:active { color: var(--accentColor); text-decoration: none; }
+.social-icon, .credit-txt-clr, .footer a { color: var(--textColor) !important; }
+
+@supports (-webkit-touch-callout: none) {
+  html::after { display: none; }
+  body::before {
+    content: ""; position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    pointer-events: none; z-index: -1;
+    background: repeating-radial-gradient(circle at 28% 38%, oklch(0.30 0.05 220 / 0.18) 0 1px, transparent 1px 22px),
+    repeating-radial-gradient(circle at 78% 72%, oklch(0.30 0.05 220 / 0.14) 0 1px, transparent 1px 28px),
+    radial-gradient(120% 90% at 50% 50%, oklch(0.96 0.02 80) 0%, oklch(0.92 0.03 75) 100%);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  position: relative;
+  isolation: isolate;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.column {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 550px) {
+  .container {
+    width: 80%;
+  }
+  .column, .columns {
+    margin-left: 0;
+  }
+  .column:first-child, .columns:first-child {
+    margin-left: 0;
+  }
+}

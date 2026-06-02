@@ -1,0 +1,6 @@
+id: 14
+typename: opening_hours
+icon: "bi bi-clock-history"
+title: "block.title.opening_hours"
+description: "block.description.opening_hours"
+custom_html: true

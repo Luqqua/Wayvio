@@ -1,0 +1,76 @@
+/* Paper theme button + icon style */
+
+.rounded-avatar {
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--paper-ink);
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+}
+
+.social-icon {
+  font-size: 32px;
+  padding: 10px;
+  color: var(--paper-ink) !important;
+}
+
+.social-icon-div {
+  padding-bottom: 40px;
+}
+
+.button {
+  position: relative;
+  display: block;
+  margin: 0 10px 20px;
+  padding: 20px;
+  border: 2px solid var(--paper-ink);
+  border-radius: 8px;
+  background: transparent !important;
+  color: var(--paper-ink) !important;
+  text-decoration: none;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button:hover,
+.button:focus,
+.button:active,
+.button-hover:hover,
+.button-hover:focus,
+.button-hover:active,
+.button.ls-link-interactive:hover,
+.button.ls-link-interactive:focus,
+.button.ls-link-interactive:active {
+  background: transparent !important;
+  color: var(--paper-ink) !important;
+  border-color: var(--paper-ink) !important;
+  box-shadow: none !important;
+  filter: opacity(0.85);
+}
+
+.button.button-custom,
+.button.button-custom_website,
+.button.button-default {
+  background: transparent !important;
+  color: var(--paper-ink) !important;
+  border-color: var(--paper-ink) !important;
+}
+
+.icon {
+  right: 10px;
+  bottom: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  color: var(--paper-ink) !important;
+}
+
+.button:hover > .icon,
+.button:focus > .icon,
+.button:active > .icon {
+  box-shadow: none;
+  background: transparent !important;
+}

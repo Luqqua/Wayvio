@@ -1,0 +1,117 @@
+/* Glass theme — Stained Glass */
+:root { --background-color: #2A1840; --template-accent: #F3EFE7; }
+
+html {
+  position: relative; width: 100%; max-width: 100%;
+  min-height: 100vh; min-height: 100dvh;
+  overflow-x: hidden; overflow-x: clip; background-color: #1A0A28; overscroll-behavior-x: none;
+}
+
+html::before {
+  content: ""; position: fixed; top: -220px; right: 0; bottom: -220px; left: 0;
+  pointer-events: none; z-index: -3; background: #1A0A28;
+  -webkit-transform: translateZ(0); transform: translateZ(0); will-change: transform;
+}
+
+html::after {
+  content: ""; position: fixed; top: 0; right: 0; bottom: 0; left: 0;
+  pointer-events: none; z-index: -2;
+  background: conic-gradient(from 40deg at 38% 42%,
+    oklch(0.55 0.16 280) 0 38deg,
+    oklch(0.50 0.18 200) 38deg 92deg,
+    oklch(0.62 0.20 30)  92deg 148deg,
+    oklch(0.45 0.16 320) 148deg 198deg,
+    oklch(0.60 0.18 100) 198deg 252deg,
+    oklch(0.50 0.18 250) 252deg 310deg,
+    oklch(0.60 0.18 60)  310deg 360deg);
+  -webkit-transform: translateZ(0); transform: translateZ(0); will-change: transform;
+}
+
+/* dark leading lines overlay via parallax-background */
+.background-container {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%; height: 100vh; height: 100dvh; z-index: -1; pointer-events: none; overflow: hidden;
+}
+.parallax-background {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%; height: 100%; pointer-events: none;
+  mix-blend-mode: multiply;
+  background: conic-gradient(from 40deg at 38% 42%,
+    transparent 0 37.4deg,
+    oklch(0.10 0.01 60) 37.4deg 38.6deg, transparent 38.6deg 91.4deg,
+    oklch(0.10 0.01 60) 91.4deg 92.6deg, transparent 92.6deg 147.4deg,
+    oklch(0.10 0.01 60) 147.4deg 148.6deg, transparent 148.6deg 197.4deg,
+    oklch(0.10 0.01 60) 197.4deg 198.6deg, transparent 198.6deg 251.4deg,
+    oklch(0.10 0.01 60) 251.4deg 252.6deg, transparent 252.6deg 309.4deg,
+    oklch(0.10 0.01 60) 309.4deg 310.6deg, transparent 310.6deg 360deg);
+}
+#object1, #object2, #object3, #object4, #object5, #object6,
+#object7, #object8, #object9, #object10, #object11, #object12 { display: none; }
+
+a, a:hover, a:focus, a:active { color: #F3EFE7; text-decoration: none; }
+.social-icon, .credit-txt-clr, .footer a { color: #F3EFE7 !important; }
+.profile-heading,
+.description-parent,
+.description-parent p,
+.ls-profile-summary-core {
+  color: #FFFFFF !important;
+}
+
+@supports (-webkit-touch-callout: none) {
+  html::after { display: none; }
+  body::before {
+    content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+    pointer-events: none; z-index: -1;
+    background: conic-gradient(from 40deg at 38% 42%,
+      oklch(0.55 0.16 280) 0 38deg,
+      oklch(0.50 0.18 200) 38deg 92deg,
+      oklch(0.62 0.20 30)  92deg 148deg,
+      oklch(0.45 0.16 320) 148deg 198deg,
+      oklch(0.60 0.18 100) 198deg 252deg,
+      oklch(0.50 0.18 250) 252deg 310deg,
+      oklch(0.60 0.18 60)  310deg 360deg);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  position: relative;
+  isolation: isolate;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.column {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 550px) {
+  .container {
+    width: 80%;
+  }
+  .column, .columns {
+    margin-left: 0;
+  }
+  .column:first-child, .columns:first-child {
+    margin-left: 0;
+  }
+}

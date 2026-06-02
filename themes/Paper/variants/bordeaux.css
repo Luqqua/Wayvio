@@ -1,0 +1,6 @@
+/* Paper variant: Bordeaux */
+:root {
+  --paper-bg: #7a3643;
+  --paper-bg-deep: #2b0c13;
+  --paper-ink: #ffffff;
+}

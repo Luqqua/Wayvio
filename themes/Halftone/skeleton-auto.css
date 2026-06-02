@@ -1,0 +1,109 @@
+/* Halftone theme — Halftone Fade */
+:root {
+  --background-color: #F0E4D8;
+  --template-accent: #8B3000;
+  --template-text: #3B1A0A;
+}
+
+html {
+  position: relative; width: 100%; max-width: 100%;
+  min-height: 100vh; min-height: 100dvh;
+  overflow-x: hidden; overflow-x: clip; background-color: #E4D4C4; overscroll-behavior-x: none;
+}
+
+/* deep fallback — provides base cream */
+html::before {
+  content: ""; position: fixed; top: -220px; right: 0; bottom: -220px; left: 0;
+  pointer-events: none; z-index: -3;
+  background: oklch(0.94 0.02 50);
+  -webkit-transform: translateZ(0); transform: translateZ(0); will-change: transform;
+}
+
+/* first halftone pattern — orange-brown dots, top-left fade */
+html::after {
+  content: ""; position: fixed; top: 0; right: 0; bottom: 0; left: 0;
+  pointer-events: none; z-index: -2;
+  background-color: transparent;
+  background-image: radial-gradient(oklch(0.55 0.13 30) 28%, transparent 32%);
+  background-size: 14px 14px;
+  -webkit-mask-image: linear-gradient(135deg, black 0%, transparent 55%);
+  mask-image: linear-gradient(135deg, black 0%, transparent 55%);
+  opacity: 0.55;
+  -webkit-transform: translateZ(0); transform: translateZ(0); will-change: transform;
+}
+
+/* second halftone pattern — blue dots, bottom-right fade, via parallax layer */
+.background-container {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%; height: 100vh; height: 100dvh; z-index: -1; pointer-events: none; overflow: hidden;
+}
+.parallax-background {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%; height: 100%; pointer-events: none; overflow: hidden;
+  background-image: radial-gradient(oklch(0.48 0.12 250) 22%, transparent 26%);
+  background-size: 18px 18px;
+  -webkit-mask-image: linear-gradient(315deg, black 0%, transparent 60%);
+  mask-image: linear-gradient(315deg, black 0%, transparent 60%);
+  opacity: 0.30;
+}
+#object1, #object2, #object3, #object4, #object5, #object6,
+#object7, #object8, #object9, #object10, #object11, #object12 { display: none; }
+
+a, a:hover, a:focus, a:active { color: var(--accentColor); text-decoration: none; }
+.social-icon, .credit-txt-clr, .footer a { color: var(--textColor) !important; }
+
+@supports (-webkit-touch-callout: none) {
+  html::after { display: none; }
+  body::before {
+    content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+    pointer-events: none; z-index: -1; background-color: transparent;
+    background-image: radial-gradient(oklch(0.55 0.13 30) 28%, transparent 32%);
+    background-size: 14px 14px;
+    -webkit-mask-image: linear-gradient(135deg, black 0%, transparent 55%);
+    mask-image: linear-gradient(135deg, black 0%, transparent 55%);
+    opacity: 0.55;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  position: relative;
+  isolation: isolate;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.column {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 550px) {
+  .container {
+    width: 80%;
+  }
+  .column, .columns {
+    margin-left: 0;
+  }
+  .column:first-child, .columns:first-child {
+    margin-left: 0;
+  }
+}

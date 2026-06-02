@@ -1,0 +1,6 @@
+id: 10
+typename: smart_embed
+icon: "bi bi-shield-lock"
+title: "block.title.smart_embed"
+description: "block.description.smart_embed"
+custom_html: true

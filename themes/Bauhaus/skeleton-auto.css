@@ -1,0 +1,142 @@
+/* Bauhaus theme — Bauhaus */
+:root {
+  --background-color: #EEE8DC;
+  --template-accent: #FFFFFF;
+  --template-text: #FFFFFF;
+  --textColor: #FFFFFF;
+  --accentColor: #FFFFFF;
+}
+
+html {
+  position: relative; width: 100%; max-width: 100%;
+  min-height: 100vh; min-height: 100dvh;
+  overflow-x: hidden; overflow-x: clip; background-color: #DED8CC; overscroll-behavior-x: none;
+}
+
+html::before {
+  content: ""; position: fixed; top: -220px; right: 0; bottom: -220px; left: 0;
+  pointer-events: none; z-index: -3; background: #DED8CC;
+  -webkit-transform: translateZ(0); transform: translateZ(0); will-change: transform;
+}
+
+html::after {
+  content: ""; position: fixed; top: 0; right: 0; bottom: 0; left: 0;
+  pointer-events: none; z-index: -2;
+  background: oklch(0.94 0.02 85);
+  -webkit-transform: translateZ(0); transform: translateZ(0); will-change: transform;
+}
+
+/* Bauhaus shapes via #object1-4 inside parallax-background */
+.background-container {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%; height: 100vh; height: 100dvh; z-index: -1; pointer-events: none; overflow: hidden;
+}
+.parallax-background {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%; height: 100%; pointer-events: none; overflow: hidden;
+}
+#object1 {
+  position: absolute; display: block;
+  width: 50%; aspect-ratio: 1; border-radius: 50%;
+  left: 8%; top: 18%;
+  background: oklch(0.70 0.16 30);
+}
+#object2 {
+  position: absolute; display: block;
+  width: 28%; aspect-ratio: 1;
+  right: 12%; top: 12%;
+  background: oklch(0.85 0.15 95);
+}
+#object3 {
+  position: absolute; display: block;
+  width: 36%; aspect-ratio: 1;
+  right: 6%; bottom: -10%;
+  background: oklch(0.55 0.14 250);
+  clip-path: polygon(0 100%, 100% 100%, 100% 0);
+}
+#object4 {
+  position: absolute; display: block;
+  width: 70%; height: 4%;
+  left: -5%; top: 70%;
+  background: oklch(0.18 0.01 60);
+  transform: rotate(-8deg);
+}
+#object5, #object6, #object7, #object8, #object9, #object10, #object11, #object12 { display: none; }
+
+a, a:hover, a:focus, a:active { color: #FFFFFF; text-decoration: none; }
+.social-icon, .credit-txt-clr, .footer a { color: #FFFFFF !important; }
+
+@supports (-webkit-touch-callout: none) {
+  html::after { display: none; }
+  body::before {
+    content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+    pointer-events: none; z-index: -1;
+    background: oklch(0.94 0.02 85);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  color: #FFFFFF;
+  position: relative;
+  isolation: isolate;
+}
+
+.profile-heading,
+.description-parent,
+.description-parent p,
+.ls-profile-summary-core,
+.ls-heading-block__title,
+.ls-text-block__content,
+.ls-social-proof__quote,
+.ls-social-proof__name,
+.ls-social-proof__hint,
+.ls-gastro-title,
+.ls-gastro-price,
+.ls-gastro-description,
+.ls-hours-day,
+.ls-hours-time,
+.ls-hub-contact-form,
+.ls-hub-contact-form .wayvio-form-title,
+.ls-hub-contact-form .wayvio-form-description,
+.ls-hub-contact-form .wayvio-form-row label,
+.ls-hub-contact-form .wayvio-form-consent {
+  color: #FFFFFF !important;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.column {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 550px) {
+  .container {
+    width: 80%;
+  }
+  .column, .columns {
+    margin-left: 0;
+  }
+  .column:first-child, .columns:first-child {
+    margin-left: 0;
+  }
+}

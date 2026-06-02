@@ -1,0 +1,106 @@
+/* Wabi-Paper theme */
+:root {
+  --background-color: #EEE5D6;
+  --template-accent: #4A3520;
+  --template-text: #14130F;
+}
+
+html {
+  position: relative; width: 100%; max-width: 100%;
+  min-height: 100vh; min-height: 100dvh;
+  overflow-x: hidden; overflow-x: clip;
+  background-color: #E2D8C8;
+  overscroll-behavior-x: none;
+}
+
+html::before {
+  content: ""; position: fixed;
+  top: -220px; right: 0; bottom: -220px; left: 0;
+  pointer-events: none; z-index: -3;
+  background: #E2D8C8;
+  -webkit-transform: translateZ(0); transform: translateZ(0);
+  will-change: transform;
+}
+
+html::after {
+  content: ""; position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  pointer-events: none; z-index: -2;
+  background: radial-gradient(2px 2px at 14% 22%, oklch(0.35 0.05 60 / 0.18) 50%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 64% 41%, oklch(0.35 0.05 60 / 0.14) 50%, transparent 100%),
+    radial-gradient(2px 2px at 38% 78%, oklch(0.35 0.05 60 / 0.16) 50%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 82% 14%, oklch(0.35 0.05 60 / 0.13) 50%, transparent 100%),
+    radial-gradient(2.5px 2.5px at 92% 70%, oklch(0.35 0.05 60 / 0.16) 50%, transparent 100%),
+    repeating-linear-gradient(82deg, transparent 0 30px, oklch(0.38 0.05 50 / 0.05) 30px 31px, transparent 31px 80px),
+    repeating-linear-gradient(170deg, transparent 0 60px, oklch(0.38 0.05 50 / 0.04) 60px 61px),
+    radial-gradient(50% 35% at 72% 30%, oklch(0.50 0.08 30 / 0.10) 0%, transparent 70%),
+    radial-gradient(55% 38% at 22% 78%, oklch(0.50 0.08 30 / 0.08) 0%, transparent 70%),
+    oklch(0.93 0.04 75);
+  -webkit-transform: translateZ(0); transform: translateZ(0);
+  will-change: transform;
+}
+
+a, a:hover, a:focus, a:active { color: var(--accentColor); text-decoration: none; }
+.social-icon, .credit-txt-clr, .footer a { color: var(--textColor) !important; }
+
+@supports (-webkit-touch-callout: none) {
+  html::after { display: none; }
+  body::before {
+    content: ""; position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    pointer-events: none; z-index: -1;
+    background: radial-gradient(2px 2px at 14% 22%, oklch(0.35 0.05 60 / 0.18) 50%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 64% 41%, oklch(0.35 0.05 60 / 0.14) 50%, transparent 100%),
+    radial-gradient(2px 2px at 38% 78%, oklch(0.35 0.05 60 / 0.16) 50%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 82% 14%, oklch(0.35 0.05 60 / 0.13) 50%, transparent 100%),
+    radial-gradient(2.5px 2.5px at 92% 70%, oklch(0.35 0.05 60 / 0.16) 50%, transparent 100%),
+    repeating-linear-gradient(82deg, transparent 0 30px, oklch(0.38 0.05 50 / 0.05) 30px 31px, transparent 31px 80px),
+    repeating-linear-gradient(170deg, transparent 0 60px, oklch(0.38 0.05 50 / 0.04) 60px 61px),
+    radial-gradient(50% 35% at 72% 30%, oklch(0.50 0.08 30 / 0.10) 0%, transparent 70%),
+    radial-gradient(55% 38% at 22% 78%, oklch(0.50 0.08 30 / 0.08) 0%, transparent 70%),
+    oklch(0.93 0.04 75);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  position: relative;
+  isolation: isolate;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.column {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 550px) {
+  .container {
+    width: 80%;
+  }
+  .column, .columns {
+    margin-left: 0;
+  }
+  .column:first-child, .columns:first-child {
+    margin-left: 0;
+  }
+}

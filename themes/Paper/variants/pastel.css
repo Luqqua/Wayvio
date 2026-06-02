@@ -1,0 +1,6 @@
+/* Paper variant: Pastel */
+:root {
+  --paper-bg: #f3dcc8;
+  --paper-bg-deep: #9f8570;
+  --paper-ink: #000000;
+}

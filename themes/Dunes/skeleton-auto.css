@@ -1,0 +1,94 @@
+/* Dunes theme */
+:root {
+  --background-color: #F5EEE6;
+  --template-accent: #0F3D3E;
+  --template-text: #2A2015;
+}
+
+html {
+  position: relative; width: 100%; max-width: 100%;
+  min-height: 100vh; min-height: 100dvh;
+  overflow-x: hidden; overflow-x: clip;
+  background-color: #E8DED4;
+  overscroll-behavior-x: none;
+}
+
+html::before {
+  content: ""; position: fixed;
+  top: -220px; right: 0; bottom: -220px; left: 0;
+  pointer-events: none; z-index: -3;
+  background: #E8DED4;
+  -webkit-transform: translateZ(0); transform: translateZ(0);
+  will-change: transform;
+}
+
+html::after {
+  content: ""; position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  pointer-events: none; z-index: -2;
+  background: radial-gradient(120% 80% at 20% 110%, oklch(0.86 0.06 60) 0%, transparent 60%),
+    radial-gradient(90% 70% at 110% 20%, oklch(0.90 0.05 35) 0%, transparent 55%),
+    radial-gradient(60% 50% at 50% 50%, oklch(0.94 0.03 80) 0%, transparent 70%),
+    oklch(0.96 0.015 75);
+  -webkit-transform: translateZ(0); transform: translateZ(0);
+  will-change: transform;
+}
+
+a, a:hover, a:focus, a:active { color: var(--accentColor); text-decoration: none; }
+.social-icon, .credit-txt-clr, .footer a { color: var(--textColor) !important; }
+
+@supports (-webkit-touch-callout: none) {
+  html::after { display: none; }
+  body::before {
+    content: ""; position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    pointer-events: none; z-index: -1;
+    background: radial-gradient(120% 80% at 20% 110%, oklch(0.86 0.06 60) 0%, transparent 60%),
+    radial-gradient(90% 70% at 110% 20%, oklch(0.90 0.05 35) 0%, transparent 55%),
+    radial-gradient(60% 50% at 50% 50%, oklch(0.94 0.03 80) 0%, transparent 70%),
+    oklch(0.96 0.015 75);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  position: relative;
+  isolation: isolate;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.column {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 550px) {
+  .container {
+    width: 80%;
+  }
+  .column, .columns {
+    margin-left: 0;
+  }
+  .column:first-child, .columns:first-child {
+    margin-left: 0;
+  }
+}

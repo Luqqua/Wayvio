@@ -1,0 +1,128 @@
+/* Plasma theme — Plasma Mesh */
+:root {
+  --background-color: #8020A0;
+  --template-accent: #FFFFFF;
+  --template-text: #FFFFFF;
+  --textColor: #FFFFFF;
+  --accentColor: #FFFFFF;
+}
+
+html {
+  position: relative; width: 100%; max-width: 100%;
+  min-height: 100vh; min-height: 100dvh;
+  overflow-x: hidden; overflow-x: clip; background-color: #601880; overscroll-behavior-x: none;
+}
+
+html::before {
+  content: ""; position: fixed; top: -220px; right: 0; bottom: -220px; left: 0;
+  pointer-events: none; z-index: -3; background: #601880;
+  -webkit-transform: translateZ(0); transform: translateZ(0); will-change: transform;
+}
+
+html::after {
+  content: ""; position: fixed; top: 0; right: 0; bottom: 0; left: 0;
+  pointer-events: none; z-index: -2;
+  background:
+    radial-gradient(60% 65% at 15% 20%, oklch(0.76 0.22 30) 0%, transparent 60%),
+    radial-gradient(55% 60% at 85% 30%, oklch(0.70 0.24 320) 0%, transparent 60%),
+    radial-gradient(60% 65% at 78% 92%, oklch(0.62 0.22 250) 0%, transparent 60%),
+    radial-gradient(50% 60% at 18% 88%, oklch(0.74 0.20 145) 0%, transparent 60%),
+    oklch(0.55 0.18 60);
+  -webkit-transform: translateZ(0); transform: translateZ(0); will-change: transform;
+}
+
+.background-container {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%; height: 100vh; height: 100dvh; z-index: -1; pointer-events: none; overflow: hidden;
+}
+.parallax-background {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%; height: 100%; pointer-events: none;
+}
+#object1, #object2, #object3, #object4, #object5, #object6,
+#object7, #object8, #object9, #object10, #object11, #object12 { display: none; }
+
+a, a:hover, a:focus, a:active { color: #FFFFFF; text-decoration: none; }
+.social-icon, .credit-txt-clr, .footer a { color: #FFFFFF !important; }
+.profile-heading,
+.description-parent,
+.description-parent p,
+.ls-profile-summary-core,
+.ls-profile-summary-core__title .profile-heading,
+.ls-profile-summary-core__description .description-parent,
+.ls-profile-summary-core__description .description-parent p,
+.ls-heading-block__title,
+.ls-text-block__content,
+.ls-social-proof__quote,
+.ls-social-proof__name,
+.ls-social-proof__hint,
+.ls-gastro-title,
+.ls-gastro-price,
+.ls-gastro-description,
+.ls-hours-day,
+.ls-hours-time,
+.ls-hub-contact-form,
+.ls-hub-contact-form .wayvio-form-title,
+.ls-hub-contact-form .wayvio-form-description,
+.ls-hub-contact-form .wayvio-form-row label,
+.ls-hub-contact-form .wayvio-form-consent {
+  color: #FFFFFF !important;
+}
+
+@supports (-webkit-touch-callout: none) {
+  html::after { display: none; }
+  body::before {
+    content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+    pointer-events: none; z-index: -1;
+    background:
+      radial-gradient(60% 65% at 15% 20%, oklch(0.76 0.22 30) 0%, transparent 60%),
+      radial-gradient(55% 60% at 85% 30%, oklch(0.70 0.24 320) 0%, transparent 60%),
+      radial-gradient(60% 65% at 78% 92%, oklch(0.62 0.22 250) 0%, transparent 60%),
+      radial-gradient(50% 60% at 18% 88%, oklch(0.74 0.20 145) 0%, transparent 60%),
+      oklch(0.55 0.18 60);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  color: #FFFFFF;
+  background-color: transparent;
+  position: relative;
+  isolation: isolate;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.column {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 550px) {
+  .container {
+    width: 80%;
+  }
+  .column, .columns {
+    margin-left: 0;
+  }
+  .column:first-child, .columns:first-child {
+    margin-left: 0;
+  }
+}

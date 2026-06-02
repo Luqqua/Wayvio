@@ -1,0 +1,6 @@
+id: 9
+typename: imprint
+icon: "bi bi-file-text"
+title: Impressum
+description: Rechtliche Angaben für deine Seite.
+custom_html: true

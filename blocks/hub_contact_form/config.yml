@@ -1,0 +1,6 @@
+id: 15
+typename: hub_contact_form
+icon: "bi bi-envelope-paper"
+title: "block.title.hub_contact_form"
+description: "block.description.hub_contact_form"
+custom_html: true

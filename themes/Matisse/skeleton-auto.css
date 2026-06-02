@@ -1,0 +1,116 @@
+/* Matisse theme — Matisse Cutouts */
+:root { --background-color: #EDE4D0; --template-accent: #14130F; }
+
+html {
+  position: relative; width: 100%; max-width: 100%;
+  min-height: 100vh; min-height: 100dvh;
+  overflow-x: hidden; overflow-x: clip; background-color: #DDD4C0; overscroll-behavior-x: none;
+}
+
+html::before {
+  content: ""; position: fixed; top: -220px; right: 0; bottom: -220px; left: 0;
+  pointer-events: none; z-index: -3; background: #DDD4C0;
+  -webkit-transform: translateZ(0); transform: translateZ(0); will-change: transform;
+}
+
+html::after {
+  content: ""; position: fixed; top: 0; right: 0; bottom: 0; left: 0;
+  pointer-events: none; z-index: -2;
+  background: oklch(0.93 0.05 80);
+  -webkit-transform: translateZ(0); transform: translateZ(0); will-change: transform;
+}
+
+/* Matisse cutouts via #object1-4 */
+.background-container {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%; height: 100vh; height: 100dvh; z-index: -1; pointer-events: none; overflow: hidden;
+}
+.parallax-background {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%; height: 100%; pointer-events: none; overflow: hidden;
+}
+#object1 {
+  position: absolute; display: block;
+  width: 42%; aspect-ratio: 1.1;
+  left: 4%; top: 16%;
+  background: oklch(0.55 0.16 145);
+  border-radius: 70% 30% 55% 45% / 60% 40% 60% 40%;
+}
+#object2 {
+  position: absolute; display: block;
+  width: 28%; aspect-ratio: 1;
+  right: 12%; top: 6%;
+  background: oklch(0.66 0.20 28);
+  border-radius: 30% 70% 60% 40% / 50% 30% 70% 50%;
+}
+#object3 {
+  position: absolute; display: block;
+  width: 38%; aspect-ratio: 1;
+  right: 14%; bottom: -10%;
+  background: oklch(0.42 0.16 250);
+  border-radius: 50% 50% 80% 20% / 40% 60% 40% 60%;
+  transform: rotate(-12deg);
+}
+#object4 {
+  position: absolute; display: block;
+  width: 16%; aspect-ratio: 1;
+  left: 42%; bottom: 18%;
+  background: oklch(0.78 0.18 85);
+  border-radius: 50%;
+}
+#object5, #object6, #object7, #object8, #object9, #object10, #object11, #object12 { display: none; }
+
+a, a:hover, a:focus, a:active { color: #14130F; text-decoration: none; }
+.social-icon, .credit-txt-clr, .footer a { color: #14130F !important; }
+
+@supports (-webkit-touch-callout: none) {
+  html::after { display: none; }
+  body::before {
+    content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+    pointer-events: none; z-index: -1;
+    background: oklch(0.93 0.05 80);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  position: relative;
+  isolation: isolate;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.column {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 550px) {
+  .container {
+    width: 80%;
+  }
+  .column, .columns {
+    margin-left: 0;
+  }
+  .column:first-child, .columns:first-child {
+    margin-left: 0;
+  }
+}

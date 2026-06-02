@@ -1,0 +1,6 @@
+id: 13
+typename: usp_cards
+icon: "bi bi-grid-1x2-fill"
+title: "block.title.usp_cards"
+description: "block.description.usp_cards"
+custom_html: true
